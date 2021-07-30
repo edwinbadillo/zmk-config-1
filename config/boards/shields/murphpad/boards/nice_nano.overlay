@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021 The ZMK Contributors
+ * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
@@ -7,7 +7,7 @@
 &spi1 {
 	compatible = "nordic,nrf-spim";
 	status = "okay";
-	mosi-pin = <31>;
+	mosi-pin = <6>;
 	// Unused pins, needed for SPI definition, but not used by the ws2812 driver itself.
 	sck-pin = <5>;
 	miso-pin = <7>;
@@ -21,7 +21,7 @@
 		spi-max-frequency = <4000000>;
 
 		/* WS2812 */
-		chain-length = <8>; /* number of LEDs */
+		chain-length = <5>; /* number of LEDs */
 		spi-one-frame = <0x70>;
 		spi-zero-frame = <0x40>;
 	};
@@ -31,4 +31,4 @@
 	chosen {
 		zmk,underglow = &led_strip;
 	};
-}; 
+}
