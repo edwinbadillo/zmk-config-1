@@ -40,7 +40,7 @@
                 &kp LANG_HIRAGANA   &kp KP_N1       &kp KP_N2          &kp KP_N3            &kp KP_ENTER
                 &mo 1               &kp KP_N0       &trans             &kp KP_DOT           &trans
             >;
-			sensor-bindings = < &inc_dec C_VOL_UP C_VOL_DN  &inc_dec C_VOL_UP C_VOL_DN >;
+			sensor-bindings = < &inc_dec_kp C_VOL_UP C_VOL_DN  &inc_dec_kp C_VOL_UP C_VOL_DN >;
 
         }; 
 
@@ -55,7 +55,7 @@
                 &bt BT_CLR      &rgb_ug RGB_HUD    &trans            &rgb_ug RGB_SAD     &trans
                 &trans    	&trans             &trans            &trans              &trans           
             >;  
-			sensor-bindings = < &inc_dec RGB_BRI RGB_BRD &inc_dec C_VOL_UP C_VOL_DN >;
+			sensor-bindings = < &inc_dec_kp RGB_BRI RGB_BRD &inc_dec_kp C_VOL_UP C_VOL_DN >;
 
         };
     };
